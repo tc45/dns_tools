@@ -7,12 +7,12 @@ To install the DNS Query Tool, follow these steps:
 1. Open a terminal or command prompt.
 2. Clone the repository using the following command:
 ```bash
-git clone https://github.com/tc45/dns_query_tools.git
+git clone https://github.com/tc45/dns_tools.git
 ```
 
 3. Navigate to the cloned repository directory:
 ```bash
-cd y
+cd dns_tools
 ```
 
 4. Make sure you have Python installed on your system. The tool requires Python 3.x.
