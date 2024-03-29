@@ -86,7 +86,7 @@ def perform_dns_queries(resolver, domain, record_type, num_queries, debug, log_f
         progress = (i + 1) / num_queries
         update_screen(progress, i + 1, num_queries, start_time)
 
-        time.sleep(0.05)  # Short pause between queries to avoid flooding
+        time.sleep(0.01)  # Short pause between queries to avoid flooding
 
     return success_count, failure_count, response_times
 
@@ -160,8 +160,8 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--server', default='209.244.0.3', help='DNS server to use')
     parser.add_argument('-d', '--domain', default='azprodchrsqlserver.database.windows.net', help='Domain to query')
     parser.add_argument('-r', '--record', default='A', help='DNS record type to query')
-    parser.add_argument('-q', '--queries', type=int, default=1100, help='Number of queries to send')
-    parser.add_argument('-t', '--timeout', type=int, default=2, help='Timeout in seconds')
+    parser.add_argument('-q', '--queries', type=int, default=1000, help='Number of queries to send')
+    parser.add_argument('-t', '--timeout', type=int, default=1, help='Timeout in seconds')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode and log output to a file')
 
     args = parser.parse_args()
